@@ -12,6 +12,7 @@
 		880343281DE30D0A0055DA33 /* RxSwiftUtilitiesTestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880343271DE30D0A0055DA33 /* RxSwiftUtilitiesTestClass.swift */; };
 		8803432A1DE30D610055DA33 /* RxSwiftUtilitiesTestClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880343291DE30D610055DA33 /* RxSwiftUtilitiesTestClassTests.swift */; };
 		880343501DE34B7B0055DA33 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8803434E1DE34B0F0055DA33 /* RxSwift.framework */; };
+		880343651DE395020055DA33 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8803434E1DE34B0F0055DA33 /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				880343121DE303160055DA33 /* RxSwiftUtilities.framework in Frameworks */,
+				880343651DE395020055DA33 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +159,7 @@
 				8803430D1DE303160055DA33 /* Sources */,
 				8803430E1DE303160055DA33 /* Frameworks */,
 				8803430F1DE303160055DA33 /* Resources */,
+				880343661DE395350055DA33 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -226,6 +229,21 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		880343511DE34E1F0055DA33 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		880343661DE395350055DA33 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

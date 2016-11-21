@@ -20,4 +20,8 @@ public class RxSwiftUtilitiesTestClass {
         return msg
     }
 
+    public func someObservable() -> Observable<Int> {
+        return Observable.just(1)
+    }
+
 }
