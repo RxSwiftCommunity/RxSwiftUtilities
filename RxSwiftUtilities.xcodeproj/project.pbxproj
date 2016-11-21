@@ -10,6 +10,8 @@
 		880343121DE303160055DA33 /* RxSwiftUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880343081DE303160055DA33 /* RxSwiftUtilities.framework */; };
 		880343171DE303160055DA33 /* RxSwiftUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880343161DE303160055DA33 /* RxSwiftUtilitiesTests.swift */; };
 		880343191DE303160055DA33 /* RxSwiftUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 8803430B1DE303160055DA33 /* RxSwiftUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		880343281DE30D0A0055DA33 /* RxSwiftUtilitiesTestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880343271DE30D0A0055DA33 /* RxSwiftUtilitiesTestClass.swift */; };
+		8803432A1DE30D610055DA33 /* RxSwiftUtilitiesTestClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880343291DE30D610055DA33 /* RxSwiftUtilitiesTestClassTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		880343111DE303160055DA33 /* RxSwiftUtilitiesTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RxSwiftUtilitiesTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		880343161DE303160055DA33 /* RxSwiftUtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftUtilitiesTests.swift; sourceTree = "<group>"; };
 		880343181DE303160055DA33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		880343271DE30D0A0055DA33 /* RxSwiftUtilitiesTestClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSwiftUtilitiesTestClass.swift; sourceTree = "<group>"; };
+		880343291DE30D610055DA33 /* RxSwiftUtilitiesTestClassTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSwiftUtilitiesTestClassTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				8803430B1DE303160055DA33 /* RxSwiftUtilities.h */,
+				880343271DE30D0A0055DA33 /* RxSwiftUtilitiesTestClass.swift */,
 				8803430C1DE303160055DA33 /* Info.plist */,
 			);
 			path = RxSwiftUtilities;
@@ -81,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				880343161DE303160055DA33 /* RxSwiftUtilitiesTests.swift */,
+				880343291DE30D610055DA33 /* RxSwiftUtilitiesTestClassTests.swift */,
 				880343181DE303160055DA33 /* Info.plist */,
 			);
 			path = RxSwiftUtilitiesTests;
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					880343071DE303160055DA33 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					880343101DE303160055DA33 = {
@@ -196,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				880343281DE30D0A0055DA33 /* RxSwiftUtilitiesTestClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				880343171DE303160055DA33 /* RxSwiftUtilitiesTests.swift in Sources */,
+				8803432A1DE30D610055DA33 /* RxSwiftUtilitiesTestClassTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +329,7 @@
 		8803431D1DE303160055DA33 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -331,6 +341,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.solidcell.RxSwiftUtilities;
 				PRODUCT_NAME = RxSwiftUtilities;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -338,6 +349,7 @@
 		8803431E1DE303160055DA33 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +368,7 @@
 		880343201DE303160055DA33 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = RxSwiftUtilitiesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.solidcell.RxSwiftUtilitiesTests;
@@ -367,6 +380,7 @@
 		880343211DE303160055DA33 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = RxSwiftUtilitiesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.solidcell.RxSwiftUtilitiesTests;
