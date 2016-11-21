@@ -73,9 +73,8 @@
 		8803430A1DE303160055DA33 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				8803430B1DE303160055DA33 /* RxSwiftUtilities.h */,
 				880343271DE30D0A0055DA33 /* RxSwiftUtilitiesTestClass.swift */,
-				8803430C1DE303160055DA33 /* Info.plist */,
+				880343321DE315A90055DA33 /* Supporting Files */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -84,9 +83,26 @@
 			isa = PBXGroup;
 			children = (
 				880343291DE30D610055DA33 /* RxSwiftUtilitiesTestClassTests.swift */,
-				880343181DE303160055DA33 /* Info.plist */,
+				880343331DE315B70055DA33 /* Supporting Files */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		880343321DE315A90055DA33 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8803430B1DE303160055DA33 /* RxSwiftUtilities.h */,
+				8803430C1DE303160055DA33 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		880343331DE315B70055DA33 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				880343181DE303160055DA33 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
