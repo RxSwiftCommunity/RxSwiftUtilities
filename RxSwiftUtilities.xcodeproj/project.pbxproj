@@ -15,6 +15,7 @@
 		880343651DE395020055DA33 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8803434E1DE34B0F0055DA33 /* RxSwift.framework */; };
 		880343681DE395A20055DA33 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880343671DE395A20055DA33 /* RxCocoa.framework */; };
 		880343691DE395D70055DA33 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880343671DE395A20055DA33 /* RxCocoa.framework */; };
+		8803436B1DE396290055DA33 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8803436A1DE396290055DA33 /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		880343291DE30D610055DA33 /* RxSwiftUtilitiesTestClassTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSwiftUtilitiesTestClassTests.swift; sourceTree = "<group>"; };
 		8803434E1DE34B0F0055DA33 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		880343671DE395A20055DA33 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		8803436A1DE396290055DA33 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				880343271DE30D0A0055DA33 /* RxSwiftUtilitiesTestClass.swift */,
+				8803436A1DE396290055DA33 /* ActivityIndicator.swift */,
 				880343321DE315A90055DA33 /* Supporting Files */,
 			);
 			path = Source;
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8803436B1DE396290055DA33 /* ActivityIndicator.swift in Sources */,
 				880343281DE30D0A0055DA33 /* RxSwiftUtilitiesTestClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
