@@ -26,7 +26,7 @@
 		880343081DE303160055DA33 /* RxSwiftUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwiftUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8803430B1DE303160055DA33 /* RxSwiftUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxSwiftUtilities.h; sourceTree = "<group>"; };
 		8803430C1DE303160055DA33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		880343111DE303160055DA33 /* RxSwiftUtilitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwiftUtilitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		880343111DE303160055DA33 /* RxSwiftUtilitiesTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RxSwiftUtilitiesTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		880343161DE303160055DA33 /* RxSwiftUtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftUtilitiesTests.swift; sourceTree = "<group>"; };
 		880343181DE303160055DA33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,7 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				880343081DE303160055DA33 /* RxSwiftUtilities.framework */,
-				880343111DE303160055DA33 /* RxSwiftUtilitiesTests.xctest */,
+				880343111DE303160055DA33 /* RxSwiftUtilitiesTests iOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,9 +100,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		880343071DE303160055DA33 /* RxSwiftUtilities */ = {
+		880343071DE303160055DA33 /* RxSwiftUtilities iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8803431C1DE303160055DA33 /* Build configuration list for PBXNativeTarget "RxSwiftUtilities" */;
+			buildConfigurationList = 8803431C1DE303160055DA33 /* Build configuration list for PBXNativeTarget "RxSwiftUtilities iOS" */;
 			buildPhases = (
 				880343031DE303160055DA33 /* Sources */,
 				880343041DE303160055DA33 /* Frameworks */,
@@ -113,14 +113,14 @@
 			);
 			dependencies = (
 			);
-			name = RxSwiftUtilities;
+			name = "RxSwiftUtilities iOS";
 			productName = RxSwiftUtilities;
 			productReference = 880343081DE303160055DA33 /* RxSwiftUtilities.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		880343101DE303160055DA33 /* RxSwiftUtilitiesTests */ = {
+		880343101DE303160055DA33 /* RxSwiftUtilitiesTests iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8803431F1DE303160055DA33 /* Build configuration list for PBXNativeTarget "RxSwiftUtilitiesTests" */;
+			buildConfigurationList = 8803431F1DE303160055DA33 /* Build configuration list for PBXNativeTarget "RxSwiftUtilitiesTests iOS" */;
 			buildPhases = (
 				8803430D1DE303160055DA33 /* Sources */,
 				8803430E1DE303160055DA33 /* Frameworks */,
@@ -131,9 +131,9 @@
 			dependencies = (
 				880343141DE303160055DA33 /* PBXTargetDependency */,
 			);
-			name = RxSwiftUtilitiesTests;
+			name = "RxSwiftUtilitiesTests iOS";
 			productName = RxSwiftUtilitiesTests;
-			productReference = 880343111DE303160055DA33 /* RxSwiftUtilitiesTests.xctest */;
+			productReference = 880343111DE303160055DA33 /* RxSwiftUtilitiesTests iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -168,8 +168,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				880343071DE303160055DA33 /* RxSwiftUtilities */,
-				880343101DE303160055DA33 /* RxSwiftUtilitiesTests */,
+				880343071DE303160055DA33 /* RxSwiftUtilities iOS */,
+				880343101DE303160055DA33 /* RxSwiftUtilitiesTests iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -212,7 +212,7 @@
 /* Begin PBXTargetDependency section */
 		880343141DE303160055DA33 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 880343071DE303160055DA33 /* RxSwiftUtilities */;
+			target = 880343071DE303160055DA33 /* RxSwiftUtilities iOS */;
 			targetProxy = 880343131DE303160055DA33 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -329,7 +329,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.solidcell.RxSwiftUtilities;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RxSwiftUtilities;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -347,7 +347,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.solidcell.RxSwiftUtilities;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RxSwiftUtilities;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -387,7 +387,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8803431C1DE303160055DA33 /* Build configuration list for PBXNativeTarget "RxSwiftUtilities" */ = {
+		8803431C1DE303160055DA33 /* Build configuration list for PBXNativeTarget "RxSwiftUtilities iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8803431D1DE303160055DA33 /* Debug */,
@@ -396,7 +396,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8803431F1DE303160055DA33 /* Build configuration list for PBXNativeTarget "RxSwiftUtilitiesTests" */ = {
+		8803431F1DE303160055DA33 /* Build configuration list for PBXNativeTarget "RxSwiftUtilitiesTests iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				880343201DE303160055DA33 /* Debug */,
