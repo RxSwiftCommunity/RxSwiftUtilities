@@ -55,8 +55,8 @@
 		880342FE1DE303160055DA33 = {
 			isa = PBXGroup;
 			children = (
-				8803430A1DE303160055DA33 /* RxSwiftUtilities */,
-				880343151DE303160055DA33 /* RxSwiftUtilitiesTests */,
+				8803430A1DE303160055DA33 /* Source */,
+				880343151DE303160055DA33 /* Tests */,
 				880343091DE303160055DA33 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,23 +70,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8803430A1DE303160055DA33 /* RxSwiftUtilities */ = {
+		8803430A1DE303160055DA33 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				8803430B1DE303160055DA33 /* RxSwiftUtilities.h */,
 				880343271DE30D0A0055DA33 /* RxSwiftUtilitiesTestClass.swift */,
 				8803430C1DE303160055DA33 /* Info.plist */,
 			);
-			path = RxSwiftUtilities;
+			path = Source;
 			sourceTree = "<group>";
 		};
-		880343151DE303160055DA33 /* RxSwiftUtilitiesTests */ = {
+		880343151DE303160055DA33 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				880343291DE30D610055DA33 /* RxSwiftUtilitiesTestClassTests.swift */,
 				880343181DE303160055DA33 /* Info.plist */,
 			);
-			path = RxSwiftUtilitiesTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,7 +331,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RxSwiftUtilities/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.solidcell.RxSwiftUtilities;
@@ -351,7 +351,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RxSwiftUtilities/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.solidcell.RxSwiftUtilities;
@@ -365,7 +365,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = RxSwiftUtilitiesTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.solidcell.RxSwiftUtilitiesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -377,7 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = RxSwiftUtilitiesTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.solidcell.RxSwiftUtilitiesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
