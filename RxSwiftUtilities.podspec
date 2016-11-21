@@ -11,4 +11,5 @@ Example description
   s.ios.deployment_target = "8.0"
   s.source       = { :git => "https://github.com/solidcell/RxSwiftUtilities.git", :tag => "#{s.version}" }
   s.source_files = 'Source/*.swift'
+  s.dependency   "RxSwift", "~> 3.0.1"
 end
