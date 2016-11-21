@@ -13,6 +13,8 @@
 		8803432A1DE30D610055DA33 /* RxSwiftUtilitiesTestClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880343291DE30D610055DA33 /* RxSwiftUtilitiesTestClassTests.swift */; };
 		880343501DE34B7B0055DA33 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8803434E1DE34B0F0055DA33 /* RxSwift.framework */; };
 		880343651DE395020055DA33 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8803434E1DE34B0F0055DA33 /* RxSwift.framework */; };
+		880343681DE395A20055DA33 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880343671DE395A20055DA33 /* RxCocoa.framework */; };
+		880343691DE395D70055DA33 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880343671DE395A20055DA33 /* RxCocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 		880343271DE30D0A0055DA33 /* RxSwiftUtilitiesTestClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSwiftUtilitiesTestClass.swift; sourceTree = "<group>"; };
 		880343291DE30D610055DA33 /* RxSwiftUtilitiesTestClassTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSwiftUtilitiesTestClassTests.swift; sourceTree = "<group>"; };
 		8803434E1DE34B0F0055DA33 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		880343671DE395A20055DA33 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				880343501DE34B7B0055DA33 /* RxSwift.framework in Frameworks */,
+				880343681DE395A20055DA33 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +55,7 @@
 			files = (
 				880343121DE303160055DA33 /* RxSwiftUtilities.framework in Frameworks */,
 				880343651DE395020055DA33 /* RxSwift.framework in Frameworks */,
+				880343691DE395D70055DA33 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				8803434E1DE34B0F0055DA33 /* RxSwift.framework */,
+				880343671DE395A20055DA33 /* RxCocoa.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -250,6 +257,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 			);
 			name = Carthage;
 			outputPaths = (
