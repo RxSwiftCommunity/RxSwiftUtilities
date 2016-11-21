@@ -7,13 +7,17 @@
 //
 
 import Foundation
+import RxSwift
 
 public class RxSwiftUtilitiesTestClass {
 
     public init() { }
 
     public func message() -> String {
-        return "Success!"
+        var msg = "Error :("
+        let _ = Observable.just("Success!")
+            .subscribe(onNext: { msg = $0})
+        return msg
     }
 
 }
