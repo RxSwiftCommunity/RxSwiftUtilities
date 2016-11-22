@@ -212,10 +212,10 @@
 		8803434D1DE34B0F0055DA33 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				888CC1921DE483AC00DAE48A /* iOS */,
 				888CC1E61DE48FE600DAE48A /* macOS */,
 				888CC1BB1DE48AF800DAE48A /* tvOS */,
 				888CC1931DE4841400DAE48A /* watchOS */,
-				888CC1921DE483AC00DAE48A /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -477,12 +477,12 @@
 			projectRoot = "";
 			targets = (
 				880343071DE303160055DA33 /* RxSwiftUtilities iOS */,
-				88E73C601DE481A100C0D2F6 /* RxSwiftUtilities watchOS */,
-				888CC19F1DE48A1000DAE48A /* RxSwiftUtilities tvOS */,
 				888CC1CB1DE48E9000DAE48A /* RxSwiftUtilities macOS */,
+				888CC19F1DE48A1000DAE48A /* RxSwiftUtilities tvOS */,
+				88E73C601DE481A100C0D2F6 /* RxSwiftUtilities watchOS */,
 				880343101DE303160055DA33 /* RxSwiftUtilitiesTests iOS */,
-				888CC1A71DE48A1000DAE48A /* RxSwiftUtilitiesTests tvOS */,
 				888CC1D31DE48E9100DAE48A /* RxSwiftUtilitiesTests macOS */,
+				888CC1A71DE48A1000DAE48A /* RxSwiftUtilitiesTests tvOS */,
 			);
 		};
 /* End PBXProject section */
