@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		880343121DE303160055DA33 /* RxSwiftUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880343081DE303160055DA33 /* RxSwiftUtilities.framework */; };
 		880343191DE303160055DA33 /* RxSwiftUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 8803430B1DE303160055DA33 /* RxSwiftUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		880343281DE30D0A0055DA33 /* RxSwiftUtilitiesTestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880343271DE30D0A0055DA33 /* RxSwiftUtilitiesTestClass.swift */; };
-		8803432A1DE30D610055DA33 /* RxSwiftUtilitiesTestClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880343291DE30D610055DA33 /* RxSwiftUtilitiesTestClassTests.swift */; };
 		880343501DE34B7B0055DA33 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8803434E1DE34B0F0055DA33 /* RxSwift.framework */; };
 		880343651DE395020055DA33 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8803434E1DE34B0F0055DA33 /* RxSwift.framework */; };
 		880343681DE395A20055DA33 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880343671DE395A20055DA33 /* RxCocoa.framework */; };
@@ -35,8 +33,6 @@
 		8803430C1DE303160055DA33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		880343111DE303160055DA33 /* RxSwiftUtilitiesTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RxSwiftUtilitiesTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		880343181DE303160055DA33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		880343271DE30D0A0055DA33 /* RxSwiftUtilitiesTestClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSwiftUtilitiesTestClass.swift; sourceTree = "<group>"; };
-		880343291DE30D610055DA33 /* RxSwiftUtilitiesTestClassTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSwiftUtilitiesTestClassTests.swift; sourceTree = "<group>"; };
 		8803434E1DE34B0F0055DA33 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		880343671DE395A20055DA33 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		8803436A1DE396290055DA33 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -88,7 +84,6 @@
 		8803430A1DE303160055DA33 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				880343271DE30D0A0055DA33 /* RxSwiftUtilitiesTestClass.swift */,
 				8803436A1DE396290055DA33 /* ActivityIndicator.swift */,
 				880343321DE315A90055DA33 /* Supporting Files */,
 			);
@@ -98,7 +93,6 @@
 		880343151DE303160055DA33 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				880343291DE30D610055DA33 /* RxSwiftUtilitiesTestClassTests.swift */,
 				8803436E1DE397170055DA33 /* ActivityIndicatorTests.swift */,
 				880343331DE315B70055DA33 /* Supporting Files */,
 			);
@@ -280,7 +274,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8803436B1DE396290055DA33 /* ActivityIndicator.swift in Sources */,
-				880343281DE30D0A0055DA33 /* RxSwiftUtilitiesTestClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +282,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8803436F1DE397170055DA33 /* ActivityIndicatorTests.swift in Sources */,
-				8803432A1DE30D610055DA33 /* RxSwiftUtilitiesTestClassTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
