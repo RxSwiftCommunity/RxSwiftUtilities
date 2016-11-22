@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,13 +34,25 @@
                         <sections>
                             <tableViewSection id="2MU-K9-FqQ">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Zvv-05-vMc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="vJb-pD-VCC" style="IBUITableViewCellStyleDefault" id="VPD-fL-NUK">
                                         <rect key="frame" x="0.0" y="35" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zvv-05-vMc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VPD-fL-NUK" id="JtW-vQ-Fp7">
+                                            <frame key="frameInset" width="342" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="ActivityIndicator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vJb-pD-VCC">
+                                                    <frame key="frameInset" minX="15" width="325" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="yU9-ze-Iv5" kind="show" id="hk2-Ug-35U"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -54,6 +67,150 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HAq-sv-31e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="172" y="57"/>
+        </scene>
+        <!--ActivityIndicator-->
+        <scene sceneID="Fq4-0d-yqn">
+            <objects>
+                <tableViewController id="yU9-ze-Iv5" customClass="ActivityIndicatorViewController" customModule="ExampleApp" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Km5-Kf-dzk">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="0FX-zL-DaC" userLabel="Explanation">
+                                <string key="footerTitle">The ActivityIndicator will emit `true` while at least one Observable it is tracking has not yet completed. Play with the following switches which represent uncompleted Observables when on, and completed Observables when off.</string>
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection id="bvO-dk-ngA" userLabel="Input">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="a2B-A2-4BQ">
+                                        <rect key="frame" x="0.0" y="147" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a2B-A2-4BQ" id="a4T-dG-w83">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity # 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwC-kP-39Y">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fg1-7n-7ia"/>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZwC-kP-39Y" firstAttribute="leading" secondItem="a4T-dG-w83" secondAttribute="leadingMargin" constant="8" id="5Kf-aa-F1h"/>
+                                                <constraint firstItem="ZwC-kP-39Y" firstAttribute="centerY" secondItem="a4T-dG-w83" secondAttribute="centerY" id="NiP-Ku-PYe"/>
+                                                <constraint firstItem="Fg1-7n-7ia" firstAttribute="centerY" secondItem="a4T-dG-w83" secondAttribute="centerY" id="g65-3a-lNc"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Fg1-7n-7ia" secondAttribute="trailing" constant="8" id="uT9-XY-l8m"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="pkG-ic-6PB">
+                                        <rect key="frame" x="0.0" y="191" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pkG-ic-6PB" id="IdS-Iv-OTs">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity # 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icb-sr-bdq">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Prq-A2-rSs"/>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Prq-A2-rSs" firstAttribute="centerY" secondItem="IdS-Iv-OTs" secondAttribute="centerY" id="1f4-3d-VyG"/>
+                                                <constraint firstItem="icb-sr-bdq" firstAttribute="leading" secondItem="IdS-Iv-OTs" secondAttribute="leadingMargin" constant="8" id="UYM-z7-Vvb"/>
+                                                <constraint firstItem="icb-sr-bdq" firstAttribute="centerY" secondItem="IdS-Iv-OTs" secondAttribute="centerY" id="evT-wT-9CY"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Prq-A2-rSs" secondAttribute="trailing" constant="8" id="npF-GQ-zAo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="MLN-h3-i9h">
+                                        <rect key="frame" x="0.0" y="235" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MLN-h3-i9h" id="fkO-Dr-WPE">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity # 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8K9-Bb-g65">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oPz-q6-o2y"/>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="oPz-q6-o2y" firstAttribute="centerY" secondItem="fkO-Dr-WPE" secondAttribute="centerY" id="7hl-rF-pci"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="oPz-q6-o2y" secondAttribute="trailing" constant="8" id="SzZ-Af-Lrp"/>
+                                                <constraint firstItem="8K9-Bb-g65" firstAttribute="leading" secondItem="fkO-Dr-WPE" secondAttribute="leadingMargin" constant="8" id="b9B-m7-Chb"/>
+                                                <constraint firstItem="8K9-Bb-g65" firstAttribute="centerY" secondItem="fkO-Dr-WPE" secondAttribute="centerY" id="nAh-Sm-cH6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection footerTitle="The following UILabel and UIActivityIndicator are bound to the ActivityIndicator." id="cUB-1c-jGe" userLabel="Output Explanation">
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection id="g4a-At-lrv" userLabel="Output">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="mt8-A2-qUs" style="IBUITableViewCellStyleDefault" id="sio-l5-dgQ">
+                                        <rect key="frame" x="0.0" y="379" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sio-l5-dgQ" id="1tj-It-wZc">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="true" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mt8-A2-qUs">
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="k5d-x7-LN9">
+                                        <rect key="frame" x="0.0" y="423" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k5d-x7-LN9" id="L5f-qo-Lgy">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="JPe-yG-ZyU"/>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JPe-yG-ZyU" firstAttribute="leading" secondItem="L5f-qo-Lgy" secondAttribute="leadingMargin" constant="8" id="YRC-2j-2Pw"/>
+                                                <constraint firstItem="JPe-yG-ZyU" firstAttribute="centerY" secondItem="L5f-qo-Lgy" secondAttribute="centerY" id="fGB-Js-q0q"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection footerTitle="Also, the Network Activity Indicator in the status bar is also bound to the ActivityIndicator." id="I6L-pV-Lok" userLabel="Extra Output Explanation">
+                                <cells/>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="yU9-ze-Iv5" id="rfy-0M-z9h"/>
+                            <outlet property="delegate" destination="yU9-ze-Iv5" id="mMi-ec-cio"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="ActivityIndicator" id="S1E-k2-R5v"/>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="JPe-yG-ZyU" id="9y4-5r-yuv"/>
+                        <outlet property="switch1" destination="Fg1-7n-7ia" id="yir-ep-SqD"/>
+                        <outlet property="switch2" destination="Prq-A2-rSs" id="Qg0-Rk-YRA"/>
+                        <outlet property="switch3" destination="oPz-q6-o2y" id="kgO-Me-ryY"/>
+                        <outlet property="valueCell" destination="sio-l5-dgQ" id="Do2-xG-UUz"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NFh-mT-PHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033" y="56"/>
         </scene>
     </scenes>
 </document>
