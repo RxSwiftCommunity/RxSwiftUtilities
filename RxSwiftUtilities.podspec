@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version      = "0.0.1"
   s.summary      = "Helpful classes and extensions for RxSwift"
   s.description  = <<-DESC
-Helpful classes and extensions for RxSwift
+Helpful classes and extensions for RxSwift which don't belong in RxSwift core.
                    DESC
   s.homepage     = "https://github.com/solidcell/RxSwiftUtilities"
   s.license      = { :type => "MIT", :file => "LICENSE.md" }
