@@ -431,7 +431,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = solidcell;
+				ORGANIZATIONNAME = RxSwiftCommunity;
 				TargetAttributes = {
 					880343071DE303160055DA33 = {
 						CreatedOnToolsVersion = 8.0;
@@ -786,7 +786,7 @@
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.solidcell.RxSwiftUtilities;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RxSwiftCommunity.RxSwiftUtilities;
 				PRODUCT_NAME = RxSwiftUtilities;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -811,7 +811,7 @@
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.solidcell.RxSwiftUtilities;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RxSwiftCommunity.RxSwiftUtilities;
 				PRODUCT_NAME = RxSwiftUtilities;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -828,7 +828,7 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.solidcell.RxSwiftUtilitiesTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RxSwiftCommunity.RxSwiftUtilitiesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -844,7 +844,7 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.solidcell.RxSwiftUtilitiesTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RxSwiftCommunity.RxSwiftUtilitiesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -865,7 +865,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.solidcell.RxSwiftUtilities-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RxSwiftCommunity.RxSwiftUtilities-tvOS";
 				PRODUCT_NAME = RxSwiftUtilities;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -890,7 +890,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.solidcell.RxSwiftUtilities-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RxSwiftCommunity.RxSwiftUtilities-tvOS";
 				PRODUCT_NAME = RxSwiftUtilities;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -910,7 +910,7 @@
 				);
 				INFOPLIST_FILE = Source/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.solidcell.RxSwiftUtilities-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RxSwiftCommunity.RxSwiftUtilities-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 3.0;
@@ -928,7 +928,7 @@
 				);
 				INFOPLIST_FILE = Source/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.solidcell.RxSwiftUtilities-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RxSwiftCommunity.RxSwiftUtilities-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 3.0;
@@ -953,7 +953,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.solidcell.RxSwiftUtilities-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RxSwiftCommunity.RxSwiftUtilities-macOS";
 				PRODUCT_NAME = RxSwiftUtilities;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -978,7 +978,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.solidcell.RxSwiftUtilities-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RxSwiftCommunity.RxSwiftUtilities-macOS";
 				PRODUCT_NAME = RxSwiftUtilities;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -999,7 +999,7 @@
 				INFOPLIST_FILE = Source/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.solidcell.RxSwiftUtilities-macOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RxSwiftCommunity.RxSwiftUtilities-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 3.0;
@@ -1019,7 +1019,7 @@
 				INFOPLIST_FILE = Source/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.solidcell.RxSwiftUtilities-macOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RxSwiftCommunity.RxSwiftUtilities-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 3.0;
@@ -1042,7 +1042,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.solidcell.RxSwiftUtilities-watchOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RxSwiftCommunity.RxSwiftUtilities-watchOS";
 				PRODUCT_NAME = RxSwiftUtilities;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1068,7 +1068,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.solidcell.RxSwiftUtilities-watchOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RxSwiftCommunity.RxSwiftUtilities-watchOS";
 				PRODUCT_NAME = RxSwiftUtilities;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1133,6 +1133,7 @@
 				888CC1DE1DE48E9100DAE48A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		888CC1E21DE48E9100DAE48A /* Build configuration list for PBXNativeTarget "RxSwiftUtilitiesTests macOS" */ = {
 			isa = XCConfigurationList;
@@ -1141,6 +1142,7 @@
 				888CC1E01DE48E9100DAE48A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		88E73C681DE481A100C0D2F6 /* Build configuration list for PBXNativeTarget "RxSwiftUtilities watchOS" */ = {
 			isa = XCConfigurationList;

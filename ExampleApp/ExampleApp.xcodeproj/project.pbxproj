@@ -122,7 +122,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = solidcell;
+				ORGANIZATIONNAME = RxSwiftCommunity;
 				TargetAttributes = {
 					888CC1F81DE494BB00DAE48A = {
 						CreatedOnToolsVersion = 8.0;
@@ -342,7 +342,7 @@
 				DEVELOPMENT_TEAM = 3V4RS4ALV7;
 				INFOPLIST_FILE = ExampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.solidcell.ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RxSwiftCommunity.ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -356,7 +356,7 @@
 				DEVELOPMENT_TEAM = 3V4RS4ALV7;
 				INFOPLIST_FILE = ExampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.solidcell.ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RxSwiftCommunity.ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

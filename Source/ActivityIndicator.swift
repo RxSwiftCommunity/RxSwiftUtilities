@@ -3,7 +3,7 @@
 //  RxSwiftUtilities
 //
 //  Created by Jesse Farless on 11/21/16.
-//  Copyright © 2016 solidcell. All rights reserved.
+//  Copyright © 2016 RxSwiftCommunity. All rights reserved.
 //
 //  This file was copied from RxSwift's example app:
 //  https://github.com/ReactiveX/RxSwift/blob/d6dfcfa/RxExample/RxExample/Services/ActivityIndicator.swift
