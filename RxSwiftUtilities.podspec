@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name         = "RxSwiftUtilities"
   s.version      = "0.0.1"
-  s.summary      = "Example summary."
+  s.summary      = "Helpful classes and extensions for RxSwift"
   s.description  = <<-DESC
-Example description
+Helpful classes and extensions for RxSwift
                    DESC
-  s.homepage     = "http://www.example.com"
-  s.license      = "MIT"
+  s.homepage     = "https://github.com/solidcell/RxSwiftUtilities"
+  s.license      = { :type => "MIT", :file => "LICENSE.md" }
   s.author       = { "Jesse Farless" => "solidcell@gmail.com" }
   s.ios.deployment_target = "8.0"
   s.source       = { :git => "https://github.com/solidcell/RxSwiftUtilities.git", :tag => "#{s.version}" }
