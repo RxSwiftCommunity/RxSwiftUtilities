@@ -52,9 +52,6 @@ signingIn.asDriver()
 In your `Podfile`:
 
 ```ruby
-source "https://github.com/solidcell/CocoaPodsSpecs.git"
-source "https://github.com/CocoaPods/Specs.git"
-
 use_frameworks!
 
 target "YOUR_TARGET_NAME" do
@@ -75,7 +72,7 @@ pod install
 Add this to `Cartfile`
 
 ```
-github "solidcell/RxSwiftUtilities"
+github "RxSwiftCommunity/RxSwiftUtilities"
 ```
 
 In the same directory, run:
@@ -91,7 +88,7 @@ Link/Embed frameworks as explained [here](https://github.com/Carthage/Carthage#a
 Help is always appreciated!
 
 ```shell
-git clone git@github.com:solidcell/RxSwiftUtilities.git
+git clone git@github.com:RxSwiftCommunity/RxSwiftUtilities.git
 cd RxSwiftUtilities
 ```
 > Or use your own forked repo.
