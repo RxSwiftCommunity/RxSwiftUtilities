@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		888CC1FD1DE494BB00DAE48A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888CC1FC1DE494BB00DAE48A /* AppDelegate.swift */; };
-		888CC1FF1DE494BB00DAE48A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888CC1FE1DE494BB00DAE48A /* ViewController.swift */; };
+		888CC1FF1DE494BB00DAE48A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888CC1FE1DE494BB00DAE48A /* RootViewController.swift */; };
 		888CC2021DE494BB00DAE48A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888CC2001DE494BB00DAE48A /* Main.storyboard */; };
 		888CC2041DE494BB00DAE48A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888CC2031DE494BB00DAE48A /* Assets.xcassets */; };
 		888CC2071DE494BB00DAE48A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888CC2051DE494BB00DAE48A /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 		5588B10E0F802DDC0291E7D2 /* Pods-ExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleApp/Pods-ExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		888CC1F91DE494BB00DAE48A /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		888CC1FC1DE494BB00DAE48A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		888CC1FE1DE494BB00DAE48A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		888CC1FE1DE494BB00DAE48A /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		888CC2011DE494BB00DAE48A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		888CC2031DE494BB00DAE48A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		888CC2061DE494BB00DAE48A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				888CC1FC1DE494BB00DAE48A /* AppDelegate.swift */,
-				888CC1FE1DE494BB00DAE48A /* ViewController.swift */,
+				888CC1FE1DE494BB00DAE48A /* RootViewController.swift */,
 				888CC2001DE494BB00DAE48A /* Main.storyboard */,
 				888CC2031DE494BB00DAE48A /* Assets.xcassets */,
 				888CC2051DE494BB00DAE48A /* LaunchScreen.storyboard */,
@@ -123,6 +123,7 @@
 				TargetAttributes = {
 					888CC1F81DE494BB00DAE48A = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 3V4RS4ALV7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -211,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				888CC1FF1DE494BB00DAE48A /* ViewController.swift in Sources */,
+				888CC1FF1DE494BB00DAE48A /* RootViewController.swift in Sources */,
 				888CC1FD1DE494BB00DAE48A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +335,7 @@
 			baseConfigurationReference = 5588B10E0F802DDC0291E7D2 /* Pods-ExampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3V4RS4ALV7;
 				INFOPLIST_FILE = ExampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.solidcell.ExampleApp;
@@ -347,6 +349,7 @@
 			baseConfigurationReference = 4CBC864681ED6F0BF154B7B2 /* Pods-ExampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3V4RS4ALV7;
 				INFOPLIST_FILE = ExampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.solidcell.ExampleApp;
