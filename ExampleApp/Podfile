@@ -1,0 +1,5 @@
+use_frameworks!
+
+target "ExampleApp" do
+  pod "RxSwiftUtilities", :path => "../"
+end
