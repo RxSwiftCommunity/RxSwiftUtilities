@@ -6,6 +6,21 @@ RxSwiftUtilities
 
 Helpful classes and extensions for RxSwift which don't belong in RxSwift core.
 
+## Example App
+
+This repo contains an [Example App](ExampleApp/) with interactive examples.
+
+To use the Example App:
+
+```shell
+cd ExampleApp
+pod install
+```
+
+Open the project located in [`ExampleApp/`](ExampleApp/) with Xcode and build/run it.
+
+## Usage
+
 #### ActivityIndicator
 
 ```swift
