@@ -1,0 +1,7 @@
+language: objective-c
+osx_image: xcode8
+before_install:
+  - carthage bootstrap --no-use-binaries --platform ios
+script: xcodebuild clean build test -scheme 'RxSwiftUtilities iOS' -destination "platform=iOS Simulator,name=iPhone 6S" -enableCodeCoverage YES
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -J 'RxSwiftUtilities'
