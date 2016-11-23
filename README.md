@@ -10,6 +10,8 @@ Helpful classes and extensions for [RxSwift](https://github.com/ReactiveX/RxSwif
 
 ## Usage
 
+Check out the [Documentation](http://cocoadocs.org/docsets/RxSwiftUtilities), the examples below, or the [Example App](#example-app).
+
 #### ActivityIndicator
 
 ```swift
