@@ -6,20 +6,7 @@ RxSwiftUtilities
 
 ## About
 
-Helpful classes and extensions for RxSwift which don't belong in RxSwift core.
-
-## Example App
-
-This repo contains an [Example App](ExampleApp/) with interactive examples.
-
-To use the Example App:
-
-```shell
-cd ExampleApp
-pod install
-```
-
-Open the project located in [`ExampleApp/`](ExampleApp/) with Xcode and build/run it.
+Helpful classes and extensions for [RxSwift](https://github.com/ReactiveX/RxSwift) which don't belong in RxSwift core.
 
 ## Usage
 
@@ -39,6 +26,19 @@ signingIn.asDriver()
     .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
     .addDisposableTo(disposeBag)
 ```
+
+## Example App
+
+This repo contains an [Example App](ExampleApp/) with interactive examples.
+
+To use the Example App:
+
+```shell
+cd ExampleApp
+pod install
+```
+
+Open the project located in [`ExampleApp/`](ExampleApp/) with Xcode and build/run it.
 
 ## Requirements
 
