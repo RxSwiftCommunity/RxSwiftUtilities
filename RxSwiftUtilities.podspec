@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RxSwiftUtilities"
-  s.version      = "1.0.1"
+  s.version      = "2.0.0"
   s.summary      = "Helpful classes and extensions for RxSwift"
   s.description  = <<-DESC
 Helpful classes and extensions for RxSwift which don't belong in RxSwift core.
@@ -14,6 +14,6 @@ Helpful classes and extensions for RxSwift which don't belong in RxSwift core.
   s.watchos.deployment_target = "2.0"
   s.source       = { :git => "https://github.com/RxSwiftCommunity/RxSwiftUtilities.git", :tag => "#{s.version}" }
   s.source_files = 'Source/*.swift'
-  s.dependency   "RxSwift", "~> 3.0"
-  s.dependency   "RxCocoa", "~> 3.0"
+  s.dependency   "RxSwift", "~> 4.0"
+  s.dependency   "RxCocoa", "~> 4.0"
 end
