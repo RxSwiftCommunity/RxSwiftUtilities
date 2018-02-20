@@ -1,7 +1,7 @@
 PODS:
-  - RxCocoa (4.1.2):
+  - RxCocoa (4.1.1):
     - RxSwift (~> 4.0)
-  - RxSwift (4.1.2)
+  - RxSwift (4.1.1)
   - RxSwiftUtilities (2.0.0):
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
@@ -14,10 +14,10 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
-  RxSwift: e49536837d9901277638493ea537394d4b55f570
-  RxSwiftUtilities: b292dcdc286744db591fea3146c9382abc6e0033
+  RxCocoa: fd0862fd2df95fa55562ad28ffd2522c25eb4a85
+  RxSwift: c6e3b1c7b325c7d121cd4327e9d98b7ed746b570
+  RxSwiftUtilities: 35a344ddfa970464efd50d8e1edd907a5a305afe
 
 PODFILE CHECKSUM: 7684ee7ca38232e18d184c27a385894b625d7ee4
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.3.1
