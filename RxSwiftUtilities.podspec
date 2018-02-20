@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RxSwiftUtilities"
-  s.version      = "2.0.0"
+  s.version      = "2.1.0"
   s.summary      = "Helpful classes and extensions for RxSwift"
   s.description  = <<-DESC
 Helpful classes and extensions for RxSwift which don't belong in RxSwift core.
@@ -8,8 +8,8 @@ Helpful classes and extensions for RxSwift which don't belong in RxSwift core.
   s.homepage     = "https://github.com/RxSwiftCommunity/RxSwiftUtilities"
   s.license      = { :type => "MIT", :file => "LICENSE.md" }
   s.author       = { "Jesse Farless" => "solidcell@gmail.com" }
-  s.ios.deployment_target = "8.0"
-  s.osx.deployment_target = "10.10"
+  s.ios.deployment_target = "9.3"
+  s.osx.deployment_target = "10.11"
   s.tvos.deployment_target = "9.0"
   s.watchos.deployment_target = "2.0"
   s.source       = { :git => "https://github.com/RxSwiftCommunity/RxSwiftUtilities.git", :tag => "#{s.version}" }
