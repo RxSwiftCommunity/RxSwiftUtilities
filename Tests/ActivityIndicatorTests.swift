@@ -7,8 +7,9 @@
 //
 
 import XCTest
-import RxSwiftUtilities
+@testable import RxSwiftUtilities
 import RxSwift
+import RxCocoa
 
 class ActivityIndicatorTests: XCTestCase {
 
