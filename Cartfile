@@ -1,1 +1,2 @@
 github "ReactiveX/RxSwift" ~> 3.0
+github "ReactiveX/RxTest" ~> 3.0
