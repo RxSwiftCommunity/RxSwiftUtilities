@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 
 ## [master](https://github.com/RxSwiftCommunity/RxSwiftUtilities/tree/master) (Xcode 9 / Swift 4 compatible)
 
-* nothing *
+* Add Operators `<->`
 
 ## [2.0.1](https://github.com/RxSwiftCommunity/RxSwiftUtilities/releases/tag/2.0.1) (Xcode 9 / Swift 4 compatible)
 
