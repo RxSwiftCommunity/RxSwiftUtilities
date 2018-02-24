@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [master](https://github.com/RxSwiftCommunity/RxSwiftUtilities/tree/master) (Xcode 8 / Swift 3.0 compatible)
+## Master
 
-*nothing*
+#### Updated
+- Add Operators `<->`
+
+## [4.1.1](https://github.com/RxSwiftCommunity/RxSwiftUtilities/releases/tag/2.0.0)
+
+- Update to Swift 4 and RxSwift 4.
