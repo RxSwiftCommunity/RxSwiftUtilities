@@ -30,24 +30,24 @@ class ActivityIndicatorViewController: UITableViewController {
         [switch1, switch2, switch3].forEach { switchControl in
             createActivityObservable(switchControl: switchControl, activityIndicator: activityIndicator)
                 .subscribe()
-                .addDisposableTo(disposeBag)
+                .disposed(by: disposeBag)
         }
 
         // This will drive the UILabel in the view controller
         activityIndicator.asDriver()
             .map { String(describing: $0) }
             .drive(valueCell.textLabel!.rx.text)
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
 
         // This will drive a UIActivityIndicatorView in the view controller
         activityIndicator.asDriver()
             .drive(activityIndicatorView.rx.isAnimating)
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
 
         // This will drive the Network Activity Indicator in the status bar
         activityIndicator.asDriver()
             .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
     }
 
     private func createActivityObservable(switchControl: UISwitch,

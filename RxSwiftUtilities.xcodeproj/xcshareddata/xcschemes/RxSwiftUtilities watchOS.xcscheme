@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "880343071DE303160055DA33"
+               BlueprintIdentifier = "88E73C601DE481A100C0D2F6"
                BuildableName = "RxSwiftUtilities.framework"
-               BlueprintName = "RxSwiftUtilities iOS"
+               BlueprintName = "RxSwiftUtilities watchOS"
                ReferencedContainer = "container:RxSwiftUtilities.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -27,29 +27,9 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       language = ""
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "880343101DE303160055DA33"
-               BuildableName = "RxSwiftUtilitiesTests iOS.xctest"
-               BlueprintName = "RxSwiftUtilitiesTests iOS"
-               ReferencedContainer = "container:RxSwiftUtilities.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "880343071DE303160055DA33"
-            BuildableName = "RxSwiftUtilities.framework"
-            BlueprintName = "RxSwiftUtilities iOS"
-            ReferencedContainer = "container:RxSwiftUtilities.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -67,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "880343071DE303160055DA33"
+            BlueprintIdentifier = "88E73C601DE481A100C0D2F6"
             BuildableName = "RxSwiftUtilities.framework"
-            BlueprintName = "RxSwiftUtilities iOS"
+            BlueprintName = "RxSwiftUtilities watchOS"
             ReferencedContainer = "container:RxSwiftUtilities.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -85,9 +65,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "880343071DE303160055DA33"
+            BlueprintIdentifier = "88E73C601DE481A100C0D2F6"
             BuildableName = "RxSwiftUtilities.framework"
-            BlueprintName = "RxSwiftUtilities iOS"
+            BlueprintName = "RxSwiftUtilities watchOS"
             ReferencedContainer = "container:RxSwiftUtilities.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
