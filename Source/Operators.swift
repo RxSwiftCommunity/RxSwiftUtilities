@@ -37,7 +37,7 @@ public func nonMarkedText(_ textInput: UITextInput) -> String? {
 
 public func <-> <Base>(textInput: TextInput<Base>, variable: Variable<String>) -> Disposable {
     let bindToUIDisposable = variable.asObservable()
-        .bindTo(textInput.text)
+        .bind(to: textInput.text)
     let bindToVariable = textInput.text
         .subscribe(onNext: { [weak base = textInput.base] n in
             guard let base = base else {
@@ -81,7 +81,7 @@ public func <-> <T>(property: ControlProperty<T>, variable: Variable<T>) -> Disp
      */
     
     let bindToUIDisposable = variable.asObservable()
-        .bindTo(property)
+        .bind(to: property)
     let bindToVariable = property
         .subscribe(onNext: { n in
             variable.value = n
@@ -93,5 +93,3 @@ public func <-> <T>(property: ControlProperty<T>, variable: Variable<T>) -> Disp
 }
 
 // }
-
-
