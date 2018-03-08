@@ -8,6 +8,7 @@
 
 import XCTest
 import RxSwiftUtilities
+import RxCocoa
 import RxSwift
 
 class ActivityIndicatorTests: XCTestCase {

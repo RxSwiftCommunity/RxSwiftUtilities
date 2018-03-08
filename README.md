@@ -28,7 +28,7 @@ let signedIn = loginButtonTap.withLatestFrom(usernameAndPassword)
 
 signingIn.asDriver()
     .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
-    .addDisposableTo(disposeBag)
+    .disposed(by: disposeBag)
 ```
 
 ## Example App
@@ -46,8 +46,8 @@ Open the project located in [`ExampleApp/`](ExampleApp/) with Xcode and build/ru
 
 ## Requirements
 
-* Xcode 8.0
-* Swift 3.0
+* Xcode 9
+* Swift 4
 
 ## Installation
 
