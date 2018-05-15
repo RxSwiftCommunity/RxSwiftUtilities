@@ -40,17 +40,17 @@ private struct ActivityToken<E> : ObservableConvertibleType, Disposable {
 public class ActivityIndicator : SharedSequenceConvertibleType {
     public typealias E = Bool
     public typealias SharingStrategy = DriverSharingStrategy
-
+    
     private let _lock = NSRecursiveLock()
-    private let _variable = Variable(0)
+    private let _variable = BehaviorRelay(value: 0)
     private let _loading: SharedSequence<SharingStrategy, Bool>
-
+    
     public init() {
         _loading = _variable.asDriver()
             .map { $0 > 0 }
             .distinctUntilChanged()
     }
-
+    
     fileprivate func trackActivityOfObservable<O: ObservableConvertibleType>(_ source: O) -> Observable<O.E> {
         return Observable.using({ () -> ActivityToken<O.E> in
             self.increment()
@@ -59,24 +59,23 @@ public class ActivityIndicator : SharedSequenceConvertibleType {
             return t.asObservable()
         }
     }
-
+    
     private func increment() {
         _lock.lock()
-        _variable.value = _variable.value + 1
+        _variable.accept(_variable.value + 1)
         _lock.unlock()
     }
-
+    
     private func decrement() {
         _lock.lock()
-        _variable.value = _variable.value - 1
+        _variable.accept(_variable.value - 1)
         _lock.unlock()
     }
-
+    
     public func asSharedSequence() -> SharedSequence<SharingStrategy, E> {
         return _loading
     }
 }
-
 extension ObservableConvertibleType {
     public func trackActivity(_ activityIndicator: ActivityIndicator) -> Observable<E> {
         return activityIndicator.trackActivityOfObservable(self)
