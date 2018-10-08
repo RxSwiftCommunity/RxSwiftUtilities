@@ -12,88 +12,91 @@ import RxSwift
 import RxCocoa
 import RxTest
 
-final class PrimitiveMockObserver<ElementType> : ObserverType {
-    typealias Element = ElementType
+private class TwoWayBindingTests: XCTestCase {
 
-    var events: [Recorded<Event<Element>>]
-
-    init() {
-        self.events = []
-    }
-
-    func on(_ event: Event<Element>) {
-        events.append(Recorded(time: 0, value: event))
-    }
-}
-
-
-class TwoWayBindingTests: XCTestCase {
-    let bag = DisposeBag()
-
-    func testInitiallyEmitDataFromVariable() {
+    func testNoInitialControlPropertyValue() {
+        let bag = DisposeBag()
         let variable = Variable("start")
-        let propertySubject = PublishSubject<String>()
-        let changedObserver = PrimitiveMockObserver<String>()
+        let controlValues = PublishSubject<String>()
+        let controlSink = MockObserver<String>()
         let controlProperty = ControlProperty<String>(
-            values: propertySubject.asObserver(),
-            valueSink: changedObserver
+            values: controlValues,
+            valueSink: controlSink
         )
 
-        _ = controlProperty <-> variable
+        XCTAssertEqual(variable.value, "start")
+        XCTAssertEqual(controlSink.events, [])
 
-        XCTAssertEqual(changedObserver.events, [next(0, "start")])
+        (controlProperty <-> variable)
+            .disposed(by: bag)
+
+        XCTAssertEqual(variable.value, "start")
+        XCTAssertEqual(controlSink.events, [Event.next("start")])
     }
 
-    func testInitiallyEmitDataFromControlProperty() {
-        let variable = Variable("start")
-        let propertySubject = PublishSubject<String>()
-        let changedObserver = PrimitiveMockObserver<String>()
+    func testWithInitialControlPropertyValue() {
+        let bag = DisposeBag()
+        let variable = Variable("start variable")
+        let controlValues = BehaviorSubject<String>(value: "start control")
+        let controlSink = MockObserver<String>()
         let controlProperty = ControlProperty<String>(
-            values: propertySubject.asObserver(),
-            valueSink: changedObserver
+            values: controlValues,
+            valueSink: controlSink
         )
 
-        _ = controlProperty <-> variable
+        XCTAssertEqual(variable.value, "start variable")
+        XCTAssertEqual(controlSink.events, [])
 
-        propertySubject.onNext("changed")
-        XCTAssertEqual(variable.value, "changed")
+        (controlProperty <-> variable)
+            .disposed(by: bag)
 
+        XCTAssertEqual(variable.value, "start control")
+        XCTAssertEqual(controlSink.events, [Event.next("start variable"),
+                                            Event.next("start control")])
     }
 
     func testChanged() {
+        let bag = DisposeBag()
         let variable = Variable("start")
-        let propertySubject = PublishSubject<String>()
-        let changedObserver = PrimitiveMockObserver<String>()
+        let controlValues = PublishSubject<String>()
+        let controlSink = MockObserver<String>()
         let controlProperty = ControlProperty<String>(
-            values: propertySubject.asObserver(),
-            valueSink: changedObserver
+            values: controlValues,
+            valueSink: controlSink
         )
 
-        _ = controlProperty <-> variable
-        var events: [Recorded<Event<String>>] = [next(0, "start")]
-        XCTAssertEqual(changedObserver.events, events)
+        (controlProperty <-> variable)
+            .disposed(by: bag)
 
         variable.value = "changed"
-        events.append(next(0, "changed"))
-        XCTAssertEqual(changedObserver.events, events)
 
-        propertySubject.onNext("changed 2")
-        events.append(next(0, "changed 2"))
-        XCTAssertEqual(changedObserver.events, events)
+        XCTAssertEqual(variable.value, "changed")
+        XCTAssertEqual(controlSink.events, [Event.next("start"),
+                                            .next("changed")])
+
+        controlValues.onNext("changed 2")
+
+        XCTAssertEqual(controlSink.events, [Event.next("start"),
+                                            .next("changed"),
+                                            .next("changed 2")])
         XCTAssertEqual(variable.value, "changed 2")
 
-        propertySubject.onNext("changed 3")
-        events.append(next(0, "changed 3"))
-        XCTAssertEqual(changedObserver.events, events)
-        XCTAssertEqual(variable.value, "changed 3")
+        variable.value = "changed 3"
 
-        variable.value = "changed 4"
-        events.append(next(0, "changed 4"))
-        XCTAssertEqual(changedObserver.events, events)
-        XCTAssertEqual(variable.value, "changed 4")
+        XCTAssertEqual(controlSink.events, [Event.next("start"),
+                                            .next("changed"),
+                                            .next("changed 2"),
+                                            .next("changed 3")])
+    }
+}
 
-        propertySubject.onCompleted()
-        variable.value = "changed 5"
-        print(changedObserver.events)
+private class MockObserver<ElementType>: ObserverType {
+
+    typealias Element = ElementType
+
+    private(set) var events: [Event<Element>] = []
+
+    func on(_ event: Event<Element>) {
+        events.append(event)
     }
 }

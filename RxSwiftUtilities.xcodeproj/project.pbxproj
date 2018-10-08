@@ -12,6 +12,8 @@
 		880343681DE395A20055DA33 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880343671DE395A20055DA33 /* RxCocoa.framework */; };
 		8803436B1DE396290055DA33 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8803436A1DE396290055DA33 /* ActivityIndicator.swift */; };
 		8803436F1DE397170055DA33 /* ActivityIndicatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8803436E1DE397170055DA33 /* ActivityIndicatorTests.swift */; };
+		88798719216B540500ED83F6 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880343671DE395A20055DA33 /* RxCocoa.framework */; };
+		8879871B216B71F400ED83F6 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8879871A216B71F400ED83F6 /* RxTest.framework */; };
 		888CC1911DE4839900DAE48A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 888CC1901DE4839900DAE48A /* RxSwift.framework */; };
 		888CC1981DE4848300DAE48A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 888CC1961DE4843000DAE48A /* RxSwift.framework */; };
 		888CC1991DE4848500DAE48A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 888CC1941DE4842B00DAE48A /* RxCocoa.framework */; };
@@ -71,6 +73,7 @@
 		880343671DE395A20055DA33 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		8803436A1DE396290055DA33 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		8803436E1DE397170055DA33 /* ActivityIndicatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorTests.swift; sourceTree = "<group>"; };
+		8879871A216B71F400ED83F6 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		888CC1901DE4839900DAE48A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		888CC1941DE4842B00DAE48A /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/watchOS/RxCocoa.framework; sourceTree = "<group>"; };
 		888CC1961DE4843000DAE48A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/watchOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 			files = (
 				880343121DE303160055DA33 /* RxSwiftUtilities.framework in Frameworks */,
 				88EB6322216B43F400130C74 /* RxSwift.framework in Frameworks */,
+				88798719216B540500ED83F6 /* RxCocoa.framework in Frameworks */,
+				8879871B216B71F400ED83F6 /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +225,7 @@
 		8803434D1DE34B0F0055DA33 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8879871A216B71F400ED83F6 /* RxTest.framework */,
 				888CC1921DE483AC00DAE48A /* iOS */,
 				888CC1E61DE48FE600DAE48A /* macOS */,
 				888CC1BB1DE48AF800DAE48A /* tvOS */,
@@ -585,7 +591,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 		888CC1EF1DE4928800DAE48A /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -601,7 +607,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

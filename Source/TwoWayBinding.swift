@@ -1,5 +1,5 @@
 //
-//  Operators.swift
+//  TwoWayBinding.swift
 //  RxExample
 //
 //  Created by Krunoslav Zaher on 12/6/15.
@@ -13,11 +13,11 @@ import RxSwift
 import RxCocoa
 import UIKit
 
-// Two way binding operator between control property and variable, that's all it takes {
+// Two way binding operator between control property and variable, that's all it takes
 
 infix operator <-> : DefaultPrecedence
 
-func nonMarkedText(_ textInput: UITextInput) -> String? {
+private func nonMarkedText(_ textInput: UITextInput) -> String? {
     let start = textInput.beginningOfDocument
     let end = textInput.endOfDocument
 
@@ -70,28 +70,19 @@ public func <-> <Base>(textInput: TextInput<Base>, variable: Variable<String>) -
     return Disposables.create(bindToUIDisposable, bindToVariable)
 }
 
+/// When binding `rx.text`, be warned that for languages that use IME, intermediate results might be returned while text is being inputed.
+/// REMEDY: Just use `textField <-> variable` instead of `textField.rx.text <-> variable`.
+/// Find out more here: https://github.com/ReactiveX/RxSwift/issues/649
 public func <-> <T>(property: ControlProperty<T>, variable: Variable<T>) -> Disposable {
-    if T.self == String.self {
-        #if DEBUG
-        fatalError("It is ok to delete this message, but this is here to warn that you are maybe trying to bind to some `rx.text` property directly to variable.\n" +
-            "That will usually work ok, but for some languages that use IME, that simplistic method could cause unexpected issues because it will return intermediate results while text is being inputed.\n" +
-            "REMEDY: Just use `textField <-> variable` instead of `textField.rx.text <-> variable`.\n" +
-            "Find out more here: https://github.com/ReactiveX/RxSwift/issues/649\n"
-        )
-        #endif
-    }
 
     let bindToUIDisposable = variable.asObservable()
         .bind(to: property)
     let bindToVariable = property
         .subscribe(onNext: { n in
             variable.value = n
-        }, onCompleted:  {
+        }, onCompleted: {
             bindToUIDisposable.dispose()
         })
 
     return Disposables.create(bindToUIDisposable, bindToVariable)
 }
-
-// }
-
