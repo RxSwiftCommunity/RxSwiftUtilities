@@ -12,13 +12,13 @@ import RxSwiftUtilities
 
 class ActivityIndicatorViewController: UITableViewController {
 
-    @IBOutlet weak var switch1: UISwitch!
-    @IBOutlet weak var switch2: UISwitch!
-    @IBOutlet weak var switch3: UISwitch!
-    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
-    @IBOutlet weak var valueCell: UITableViewCell!
+    @IBOutlet private weak var switch1: UISwitch!
+    @IBOutlet private weak var switch2: UISwitch!
+    @IBOutlet private weak var switch3: UISwitch!
+    @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet private weak var valueCell: UITableViewCell!
     
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,5 +63,4 @@ class ActivityIndicatorViewController: UITableViewController {
                 }
         }
     }
-    
 }

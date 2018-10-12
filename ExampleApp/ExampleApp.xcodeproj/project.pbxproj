@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8879871D216B73EA00ED83F6 /* TwoWayBindingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8879871C216B73EA00ED83F6 /* TwoWayBindingViewController.swift */; };
 		888CC1FD1DE494BB00DAE48A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888CC1FC1DE494BB00DAE48A /* AppDelegate.swift */; };
 		888CC1FF1DE494BB00DAE48A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888CC1FE1DE494BB00DAE48A /* RootViewController.swift */; };
 		888CC2021DE494BB00DAE48A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888CC2001DE494BB00DAE48A /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		1D1F28C6EB61974264B00610 /* Pods_ExampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBC864681ED6F0BF154B7B2 /* Pods-ExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleApp/Pods-ExampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		5588B10E0F802DDC0291E7D2 /* Pods-ExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleApp/Pods-ExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8879871C216B73EA00ED83F6 /* TwoWayBindingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoWayBindingViewController.swift; sourceTree = "<group>"; };
 		888CC1F91DE494BB00DAE48A /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		888CC1FC1DE494BB00DAE48A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		888CC1FE1DE494BB00DAE48A /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				888CC1FC1DE494BB00DAE48A /* AppDelegate.swift */,
 				888CC1FE1DE494BB00DAE48A /* RootViewController.swift */,
 				88EA35F71DE4A0F100796704 /* ActivityIndicatorViewController.swift */,
+				8879871C216B73EA00ED83F6 /* TwoWayBindingViewController.swift */,
 				888CC2001DE494BB00DAE48A /* Main.storyboard */,
 				888CC2031DE494BB00DAE48A /* Assets.xcassets */,
 				888CC2051DE494BB00DAE48A /* LaunchScreen.storyboard */,
@@ -103,7 +106,6 @@
 				888CC1F61DE494BB00DAE48A /* Frameworks */,
 				888CC1F71DE494BB00DAE48A /* Resources */,
 				1B0E29EE8B2B4D2FDE4632FB /* [CP] Embed Pods Frameworks */,
-				470B10DF685E48927FB2D6F7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,21 +187,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExampleApp/Pods-ExampleApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		470B10DF685E48927FB2D6F7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExampleApp/Pods-ExampleApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AF7EA28C7746B446AD92F775 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -228,6 +215,7 @@
 				888CC1FF1DE494BB00DAE48A /* RootViewController.swift in Sources */,
 				88EA35F81DE4A0F100796704 /* ActivityIndicatorViewController.swift in Sources */,
 				888CC1FD1DE494BB00DAE48A /* AppDelegate.swift in Sources */,
+				8879871D216B73EA00ED83F6 /* TwoWayBindingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
