@@ -188,8 +188,8 @@
 		8803430A1DE303160055DA33 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				8803436A1DE396290055DA33 /* ActivityIndicator.swift */,
-				88EB631B216B2D2E00130C74 /* TwoWayBinding.swift */,
+				889498AF2170AC6D00FCC3FE /* Common */,
+				889498B02170AC7900FCC3FE /* iOS */,
 				880343321DE315A90055DA33 /* Supporting Files */,
 			);
 			path = Source;
@@ -268,6 +268,22 @@
 				888CC1E71DE48FF600DAE48A /* RxCocoa.framework */,
 			);
 			name = macOS;
+			sourceTree = "<group>";
+		};
+		889498AF2170AC6D00FCC3FE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8803436A1DE396290055DA33 /* ActivityIndicator.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		889498B02170AC7900FCC3FE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				88EB631B216B2D2E00130C74 /* TwoWayBinding.swift */,
+			);
+			path = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
