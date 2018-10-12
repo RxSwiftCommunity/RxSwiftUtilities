@@ -88,6 +88,17 @@ private class TwoWayBindingTests: XCTestCase {
                                             .next("changed 2"),
                                             .next("changed 3")])
     }
+
+    func testTextInput() {
+        let bag = DisposeBag()
+        let textField = UITextField()
+        let variable = Variable("start")
+
+        (textField.rx.textInput <-> variable)
+            .disposed(by: bag)
+
+        XCTAssertEqual(textField.text, "start")
+    }
 }
 
 private class MockObserver<ElementType>: ObserverType {
