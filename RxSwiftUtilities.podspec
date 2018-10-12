@@ -14,7 +14,8 @@ Helpful classes and extensions for RxSwift which don't belong in RxSwift core.
   s.tvos.deployment_target = "9.0"
   s.watchos.deployment_target = "2.0"
   s.source       = { :git => "https://github.com/RxSwiftCommunity/RxSwiftUtilities.git", :tag => "#{s.version}" }
-  s.source_files = 'Source/*.swift'
+  s.source_files = 'Source/Common/*.swift'
+  s.ios.source_files = 'Source/iOS/*.swift'
   s.dependency   "RxSwift", "~> 4.0"
   s.dependency   "RxCocoa", "~> 4.0"
 end
