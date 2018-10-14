@@ -1,6 +1,6 @@
 RxSwiftUtilities
 ======================================
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/RxSwiftUtilities.svg)](https://img.shields.io/cocoapods/v/RxSwiftUtilities.svg)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/RxSwiftUtilities.svg)](https://cocoapods.org/pods/RxSwiftUtilities)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform](https://img.shields.io/cocoapods/p/RxSwiftUtilities.svg?style=flat)](http://cocoadocs.org/docsets/RxSwiftUtilities)
 [![Build Status](https://travis-ci.org/RxSwiftCommunity/RxSwiftUtilities.svg?branch=master)](https://travis-ci.org/RxSwiftCommunity/RxSwiftUtilities)
@@ -28,6 +28,13 @@ let signedIn = loginButtonTap.withLatestFrom(usernameAndPassword)
 
 signingIn.asDriver()
     .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
+    .disposed(by: disposeBag)
+```
+
+#### Two-way binding
+
+```swift
+(textField.rx.text <-> variable)
     .disposed(by: disposeBag)
 ```
 
