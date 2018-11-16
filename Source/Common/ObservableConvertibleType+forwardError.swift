@@ -1,5 +1,5 @@
 //
-//  ErrorTracker.swift
+//  ObservableConvertibleType+forwardError.swift
 //  Pods-ExampleApp
 //
 //  Created by Rafael Ferreira on 11/14/18.
