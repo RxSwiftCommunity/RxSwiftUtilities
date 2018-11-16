@@ -51,7 +51,6 @@ errorTracker.asDriver()
     .disposed(by: disposeBag)
 ```
 
-
 #### Two-way binding
 
 ```swift
