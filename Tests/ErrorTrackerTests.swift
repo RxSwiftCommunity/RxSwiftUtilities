@@ -12,16 +12,16 @@ import RxSwiftUtilities
 import XCTest
 
 class ErrorTrackerTests: XCTestCase {
-    func testInitiallyEmitsNothing() {
-        let errorTracker = ErrorTracker()
+    func testInitiallyEmitsNothingForPublishRelay() {
+        let errorTracker = PublishRelay<Error>()
         var isInvoked = false
         let _ = errorTracker.asObservable()
             .subscribe(onNext: { _ in isInvoked = true })
         XCTAssertFalse(isInvoked)
     }
 
-    func testEmitsErrorWhenTrackingASingleObservable() {
-        let errorTracker = ErrorTracker()
+    func testEmitsErrorWhenTrackingASingleObservableForPublishRelay() {
+        let errorTracker = PublishRelay<Error>()
         var value: Error? = nil
 
         let _ = errorTracker.asObservable()
@@ -34,8 +34,44 @@ class ErrorTrackerTests: XCTestCase {
         XCTAssertNotNil(value)
     }
 
-    func testEmitsNothingWhenTrackingASingleObservable() {
-        let errorTracker = ErrorTracker()
+    func testEmitsNothingWhenTrackingASingleObservableForPublishRelay() {
+        let errorTracker = PublishRelay<Error>()
+        var value: Error? = nil
+
+        let _ = errorTracker.asObservable()
+            .subscribe(onNext: { error in value = error })
+
+        let _ = Observable.just(1)
+            .trackError(errorTracker)
+            .subscribe()
+
+        XCTAssertNil(value)
+    }
+
+    func testInitiallyEmitsNothingForPublishSubject() {
+        let errorTracker = PublishSubject<Error>()
+        var isInvoked = false
+        let _ = errorTracker.asObservable()
+            .subscribe(onNext: { _ in isInvoked = true })
+        XCTAssertFalse(isInvoked)
+    }
+
+    func testEmitsErrorWhenTrackingASingleObservableForPublishSubject() {
+        let errorTracker = PublishSubject<Error>()
+        var value: Error? = nil
+
+        let _ = errorTracker.asObservable()
+            .subscribe(onNext: { error in value = error })
+
+        let _ = Observable<Any>.error(RxError.noElements)
+            .trackError(errorTracker)
+            .subscribe()
+
+        XCTAssertNotNil(value)
+    }
+
+    func testEmitsNothingWhenTrackingASingleObservableForPublishSubject() {
+        let errorTracker = PublishSubject<Error>()
         var value: Error? = nil
 
         let _ = errorTracker.asObservable()
