@@ -31,15 +31,15 @@ signingIn.asDriver()
     .disposed(by: disposeBag)
 ```
 
-### ErrorTracker
+### ForwardError
 
 ```swift
-let errorTracker = ErrorTracker()
+let errorTracker = PublishRelay<Error>()
 
 let signedIn = loginButtonTap.withLatestFrom(usernameAndPassword)
     .flatMapLatest { (username, password) in
         return API.signup(username, password: password)
-            .trackeError(errorTracker)
+            .forwardError(to: errorTracker)
             .catchError({ _ in Observable.never() })
     }
 }
