@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 ## [master](https://github.com/RxSwiftCommunity/RxSwiftUtilities/tree/master) (Xcode 10 / Swift 4.2 compatible)
 
 * Replace usage of deprecated Variable<Int> for BehaviorRelay<Int>.
-* Add ErrorTracker.
+* Add ObservableConvertibleType.forwardError operator.
 
 ## [2.1.0](https://github.com/RxSwiftCommunity/RxSwiftUtilities/releases/tag/2.1.0) (Xcode 10 / Swift 4.2 compatible)
 
