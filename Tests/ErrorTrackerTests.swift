@@ -28,7 +28,7 @@ class ErrorTrackerTests: XCTestCase {
             .subscribe(onNext: { error in value = error })
 
         let _ = Observable<Any>.error(RxError.noElements)
-            .trackError(errorTracker)
+            .forwardError(to: errorTracker)
             .subscribe()
 
         XCTAssertNotNil(value)
@@ -42,7 +42,7 @@ class ErrorTrackerTests: XCTestCase {
             .subscribe(onNext: { error in value = error })
 
         let _ = Observable.just(1)
-            .trackError(errorTracker)
+            .forwardError(to: errorTracker)
             .subscribe()
 
         XCTAssertNil(value)
@@ -64,7 +64,7 @@ class ErrorTrackerTests: XCTestCase {
             .subscribe(onNext: { error in value = error })
 
         let _ = Observable<Any>.error(RxError.noElements)
-            .trackError(errorTracker)
+            .forwardError(to: errorTracker)
             .subscribe()
 
         XCTAssertNotNil(value)
@@ -78,7 +78,7 @@ class ErrorTrackerTests: XCTestCase {
             .subscribe(onNext: { error in value = error })
 
         let _ = Observable.just(1)
-            .trackError(errorTracker)
+            .forwardError(to: errorTracker)
             .subscribe()
 
         XCTAssertNil(value)
