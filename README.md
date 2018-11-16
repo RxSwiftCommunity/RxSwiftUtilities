@@ -31,6 +31,27 @@ signingIn.asDriver()
     .disposed(by: disposeBag)
 ```
 
+### ErrorTracker
+
+```swift
+let errorTracker = ErrorTracker()
+
+let signedIn = loginButtonTap.withLatestFrom(usernameAndPassword)
+    .flatMapLatest { (username, password) in
+        return API.signup(username, password: password)
+            .trackeError(errorTracker)
+            .catchError({ _ in Observable.never() })
+    }
+}
+
+errorTracker.asDriver()
+    .drive(onNext: { error in
+        // Handling specific/generic errors.
+    })
+    .disposed(by: disposeBag)
+```
+
+
 #### Two-way binding
 
 ```swift
