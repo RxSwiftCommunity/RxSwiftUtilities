@@ -38,7 +38,7 @@ private func nonMarkedText(_ textInput: UITextInput) -> String? {
     return (textInput.text(in: startRange) ?? "") + (textInput.text(in: endRange) ?? "")
 }
 
-public func <-> <Base>(textInput: TextInput<Base>, variable: Variable<String>) -> Disposable {
+public func <-> <Base>(textInput: TextInput<Base>, variable: BehaviorRelay<String>) -> Disposable {
     let bindToUIDisposable = variable.asObservable()
         .bind(to: textInput.text)
     let bindToVariable = textInput.text
@@ -61,7 +61,7 @@ public func <-> <Base>(textInput: TextInput<Base>, variable: Variable<String>) -
              and you hit "Done" button on keyboard.
              */
             if let nonMarkedTextValue = nonMarkedTextValue, nonMarkedTextValue != variable.value {
-                variable.value = nonMarkedTextValue
+                variable.accept(nonMarkedTextValue)
             }
             }, onCompleted:  {
                 bindToUIDisposable.dispose()
@@ -73,13 +73,13 @@ public func <-> <Base>(textInput: TextInput<Base>, variable: Variable<String>) -
 /// When binding `rx.text`, be warned that for languages that use IME, intermediate results might be returned while text is being inputed.
 /// REMEDY: Just use `textField <-> variable` instead of `textField.rx.text <-> variable`.
 /// Find out more here: https://github.com/ReactiveX/RxSwift/issues/649
-public func <-> <T>(property: ControlProperty<T>, variable: Variable<T>) -> Disposable {
+public func <-> <T>(property: ControlProperty<T>, variable: BehaviorRelay<T>) -> Disposable {
 
     let bindToUIDisposable = variable.asObservable()
         .bind(to: property)
     let bindToVariable = property
         .subscribe(onNext: { n in
-            variable.value = n
+            variable.accept(n)
         }, onCompleted: {
             bindToUIDisposable.dispose()
         })

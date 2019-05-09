@@ -16,7 +16,7 @@ private class TwoWayBindingTests: XCTestCase {
 
     func testNoInitialControlPropertyValue() {
         let bag = DisposeBag()
-        let variable = Variable("start")
+        let variable = BehaviorRelay(value: "start")
         let controlValues = PublishSubject<String>()
         let controlSink = MockObserver<String>()
         let controlProperty = ControlProperty<String>(
@@ -36,7 +36,7 @@ private class TwoWayBindingTests: XCTestCase {
 
     func testWithInitialControlPropertyValue() {
         let bag = DisposeBag()
-        let variable = Variable("start variable")
+        let variable = BehaviorRelay(value: "start variable")
         let controlValues = BehaviorSubject<String>(value: "start control")
         let controlSink = MockObserver<String>()
         let controlProperty = ControlProperty<String>(
@@ -57,7 +57,7 @@ private class TwoWayBindingTests: XCTestCase {
 
     func testChanged() {
         let bag = DisposeBag()
-        let variable = Variable("start")
+        let variable = BehaviorRelay(value: "start")
         let controlValues = PublishSubject<String>()
         let controlSink = MockObserver<String>()
         let controlProperty = ControlProperty<String>(
@@ -68,7 +68,7 @@ private class TwoWayBindingTests: XCTestCase {
         (controlProperty <-> variable)
             .disposed(by: bag)
 
-        variable.value = "changed"
+        variable.accept("changed")
 
         XCTAssertEqual(variable.value, "changed")
         XCTAssertEqual(controlSink.events, [Event.next("start"),
@@ -81,7 +81,7 @@ private class TwoWayBindingTests: XCTestCase {
                                             .next("changed 2")])
         XCTAssertEqual(variable.value, "changed 2")
 
-        variable.value = "changed 3"
+        variable.accept("changed 3")
 
         XCTAssertEqual(controlSink.events, [Event.next("start"),
                                             .next("changed"),
@@ -92,7 +92,7 @@ private class TwoWayBindingTests: XCTestCase {
     func testTextInput() {
         let bag = DisposeBag()
         let textField = UITextField()
-        let variable = Variable("start")
+        let variable = BehaviorRelay(value: "start")
 
         (textField.rx.textInput <-> variable)
             .disposed(by: bag)
