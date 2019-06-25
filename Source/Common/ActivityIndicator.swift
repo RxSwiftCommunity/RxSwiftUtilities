@@ -82,3 +82,11 @@ extension ObservableConvertibleType {
         return activityIndicator.trackActivityOfObservable(self)
     }
 }
+
+extension SharedSequence {
+    func trackActivity(_ activityIndicator: ActivityIndicator) -> SharedSequence<S, Element> {
+        let observable: Observable<Element> = self.trackActivity(activityIndicator)
+        return observable
+            .asSharedSequence(onErrorDriveWith: SharedSequence<S, Element>.empty())
+    }
+}
