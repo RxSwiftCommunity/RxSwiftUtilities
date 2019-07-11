@@ -13,7 +13,7 @@ import RxSwift
 import RxCocoa
 import UIKit
 
-// Two way binding operator between control property and variable, that's all it takes
+// Two way binding operator between control property and behaviorRelay, that's all it takes
 
 infix operator <-> : DefaultPrecedence
 
@@ -38,10 +38,10 @@ private func nonMarkedText(_ textInput: UITextInput) -> String? {
     return (textInput.text(in: startRange) ?? "") + (textInput.text(in: endRange) ?? "")
 }
 
-public func <-> <Base>(textInput: TextInput<Base>, variable: Variable<String>) -> Disposable {
-    let bindToUIDisposable = variable.asObservable()
+public func <-> <Base>(textInput: TextInput<Base>, behaviorRelay: BehaviorRelay<String>) -> Disposable {
+    let bindToUIDisposable = behaviorRelay.asObservable()
         .bind(to: textInput.text)
-    let bindToVariable = textInput.text
+    let bindToBehaviorRelay = textInput.text
         .subscribe(onNext: { [weak base = textInput.base] n in
             guard let base = base else {
                 return
@@ -54,35 +54,35 @@ public func <-> <Base>(textInput: TextInput<Base>, variable: Variable<String>) -
              value is not nil. This appears to be an Apple bug. If it's not, and we are doing something wrong, please let us know.
              The can be reproed easily if replace bottom code with
 
-             if nonMarkedTextValue != variable.value {
-             variable.value = nonMarkedTextValue ?? ""
+             if nonMarkedTextValue != behaviorRelay.value {
+             behaviorRelay.accept(nonMarkedTextValue ?? "")
              }
 
              and you hit "Done" button on keyboard.
              */
-            if let nonMarkedTextValue = nonMarkedTextValue, nonMarkedTextValue != variable.value {
-                variable.value = nonMarkedTextValue
+            if let nonMarkedTextValue = nonMarkedTextValue, nonMarkedTextValue != behaviorRelay.value {
+                behaviorRelay.accept(nonMarkedTextValue)
             }
             }, onCompleted:  {
                 bindToUIDisposable.dispose()
         })
 
-    return Disposables.create(bindToUIDisposable, bindToVariable)
+    return Disposables.create(bindToUIDisposable, bindToBehaviorRelay)
 }
 
 /// When binding `rx.text`, be warned that for languages that use IME, intermediate results might be returned while text is being inputed.
-/// REMEDY: Just use `textField <-> variable` instead of `textField.rx.text <-> variable`.
+/// REMEDY: Just use `textField <-> behaviorRelay` instead of `textField.rx.text <-> behaviorRelay`.
 /// Find out more here: https://github.com/ReactiveX/RxSwift/issues/649
-public func <-> <T>(property: ControlProperty<T>, variable: Variable<T>) -> Disposable {
+public func <-> <T>(property: ControlProperty<T>, behaviorRelay: BehaviorRelay<T>) -> Disposable {
 
-    let bindToUIDisposable = variable.asObservable()
+    let bindToUIDisposable = behaviorRelay.asObservable()
         .bind(to: property)
-    let bindToVariable = property
+    let bindToBehaviorRelay = property
         .subscribe(onNext: { n in
-            variable.value = n
+            behaviorRelay.accept(n)
         }, onCompleted: {
             bindToUIDisposable.dispose()
         })
 
-    return Disposables.create(bindToUIDisposable, bindToVariable)
+    return Disposables.create(bindToUIDisposable, bindToBehaviorRelay)
 }

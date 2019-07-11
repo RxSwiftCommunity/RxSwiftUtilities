@@ -16,6 +16,6 @@ Helpful classes and extensions for RxSwift which don't belong in RxSwift core.
   s.source       = { :git => "https://github.com/RxSwiftCommunity/RxSwiftUtilities.git", :tag => "#{s.version}" }
   s.source_files = 'Source/Common/*.swift'
   s.ios.source_files = 'Source/iOS/*.swift'
-  s.dependency   "RxSwift", "~> 4.4"
-  s.dependency   "RxCocoa", "~> 4.4"
+  s.dependency   "RxSwift", "~> 5.0"
+  s.dependency   "RxCocoa", "~> 5.0"
 end
