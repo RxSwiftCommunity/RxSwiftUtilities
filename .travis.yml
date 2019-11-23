@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode9.2
+osx_image: xcode10.2
 before_install:
   - carthage bootstrap --no-use-binaries --platform ios
 script: xcodebuild clean build test -scheme 'RxSwiftUtilities iOS' -destination "platform=iOS Simulator,name=iPhone 6S" -enableCodeCoverage YES
