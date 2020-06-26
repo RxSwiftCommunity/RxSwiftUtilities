@@ -7,6 +7,12 @@ All notable changes to this project will be documented in this file.
 
 * nothing *
 
+## [2.2.0](https://github.com/RxSwiftCommunity/RxSwiftUtilities/releases/tag/2.2.0) (Swift 5 compatible)
+
+* Add Github Action
+* Update to Swift 5
+* Update PodSpec
+
 ## [2.1.0](https://github.com/RxSwiftCommunity/RxSwiftUtilities/releases/tag/2.1.0) (Xcode 10 / Swift 4.2 compatible)
 
 * Add two-way binding operator `<->`

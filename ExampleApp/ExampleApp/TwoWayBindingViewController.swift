@@ -17,7 +17,7 @@ class TwoWayBindingViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet private weak var label: UILabel!
     @IBOutlet private weak var stackView: UIStackView!
 
-    private let variable = Variable<String?>(nil)
+    private let behaviorRelay = BehaviorRelay<String?>(value: nil)
     private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
@@ -40,10 +40,10 @@ class TwoWayBindingViewController: UITableViewController, UITextFieldDelegate {
             })
             .disposed(by: disposeBag)
 
-        (textField.rx.text <-> variable)
+        (textField.rx.text <-> behaviorRelay)
             .disposed(by: disposeBag)
 
-        variable
+        behaviorRelay
             .asDriver()
             .drive(label.rx.text)
             .disposed(by: disposeBag)
@@ -57,7 +57,7 @@ class TwoWayBindingViewController: UITableViewController, UITextFieldDelegate {
             button.rx.tap
                 .asDriver()
                 .map { button.titleLabel?.text }
-                .drive(variable)
+                .drive(behaviorRelay)
                 .disposed(by: disposeBag)
             button.backgroundColor = UIColor(displayP3Red: 0.93, green: 0.93, blue: 0.93, alpha: 1)
             button.layer.cornerRadius = 4
