@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  tests:
+    runs-on: macos-10.15
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/cache@v2
+      with:
+        path: Carthage
+        key: ${{ runner.os }}-carthage-${{ hashFiles('**/Cartfile.resolved') }}
+        restore-keys: |
+          ${{ runner.os }}-carthage-
+
+    - name: Carthage Bootstrap
+      run: carthage bootstrap --cache-builds --no-use-binaries --platform ios
+
+    - name: Run all tests
+      run: xcodebuild clean build test -scheme 'RxSwiftUtilities iOS' -destination "platform=iOS Simulator,name=iPhone 11" -enableCodeCoverage YES
+
+    - name: CodeCov
+      run: bash <(curl -s https://codecov.io/bash) -J 'RxSwiftUtilities'
