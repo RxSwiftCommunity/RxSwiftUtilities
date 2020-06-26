@@ -45,6 +45,7 @@
 		88EB631C216B2D2E00130C74 /* TwoWayBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB631B216B2D2E00130C74 /* TwoWayBinding.swift */; };
 		88EB631F216B2E2500130C74 /* TwoWayBindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB631D216B2E1C00130C74 /* TwoWayBindingTests.swift */; };
 		88EB6322216B43F400130C74 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 888CC1901DE4839900DAE48A /* RxSwift.framework */; };
+		C07E4F2C22C1A96F00388DEC /* ActivityIndicatorDriverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E4F2B22C1A96F00388DEC /* ActivityIndicatorDriverTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		88E73C611DE481A100C0D2F6 /* RxSwiftUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwiftUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88EB631B216B2D2E00130C74 /* TwoWayBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoWayBinding.swift; sourceTree = "<group>"; };
 		88EB631D216B2E1C00130C74 /* TwoWayBindingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoWayBindingTests.swift; sourceTree = "<group>"; };
+		C07E4F2B22C1A96F00388DEC /* ActivityIndicatorDriverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorDriverTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 			children = (
 				8803436E1DE397170055DA33 /* ActivityIndicatorTests.swift */,
 				88EB631D216B2E1C00130C74 /* TwoWayBindingTests.swift */,
+				C07E4F2B22C1A96F00388DEC /* ActivityIndicatorDriverTests.swift */,
 				880343331DE315B70055DA33 /* Supporting Files */,
 			);
 			path = Tests;
@@ -527,6 +530,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -667,6 +671,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07E4F2C22C1A96F00388DEC /* ActivityIndicatorDriverTests.swift in Sources */,
 				88EB631F216B2E2500130C74 /* TwoWayBindingTests.swift in Sources */,
 				8803436F1DE397170055DA33 /* ActivityIndicatorTests.swift in Sources */,
 			);
