@@ -53,8 +53,8 @@ Open the project located in [`ExampleApp/`](ExampleApp/) with Xcode and build/ru
 
 ## Requirements
 
-* Xcode 9
-* Swift 4
+* Xcode 11
+* Swift 5
 
 ## Installation
 
