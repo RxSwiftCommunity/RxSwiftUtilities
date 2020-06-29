@@ -51,7 +51,12 @@ jobs:
         -Xswiftc "x86_64-apple-ios13.0-simulator"
 
     - name: Run all tests
-      run: xcodebuild clean build test -scheme 'RxSwiftUtilities iOS' -destination "platform=iOS Simulator,name=iPhone 11" -enableCodeCoverage YES
+      run: |
+        swift test -Xswiftc "-sdk" \
+        -Xswiftc "`xcrun --sdk iphonesimulator --show-sdk-path`" \
+        -Xswiftc "-target" \
+        -Xswiftc "x86_64-apple-ios13.0-simulator" \
+        --enable-code-coverage
 
     - name: CodeCov
       run: bash <(curl -s https://codecov.io/bash) -J 'RxSwiftUtilities'
