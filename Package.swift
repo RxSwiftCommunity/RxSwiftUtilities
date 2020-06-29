@@ -18,6 +18,10 @@ let package = Package(
                 dependencies:["RxSwift","RxCocoa"],
                 path:"Source",
                 sources:["Common",
-                "iOS"])
+                "iOS"]),
+        .testTarget(name: "RxSwiftUtilitiesTest",
+                    dependencies:["RxSwift","RxCocoa","RxSwiftUtilities", "RxTest" ],
+                    path: "Tests"
+        )
     ]
 )
