@@ -77,6 +77,35 @@ Replace `YOUR_TARGET_NAME` and then, in the same directory, run:
 ```shell
 pod install
 ```
+### [Swift Package Manager](https://guides.cocoapods.org/using/using-cocoapods.html)
+
+**Tested with `xcode version`: `11.5`**
+
+Add the dependency with xcode via `Files>Swift Packages>Add Package Dependency...` 
+
+Or
+
+Create a `Package.swift` file.
+
+```swift
+// swift-tools-version:5.1
+
+import PackageDescription
+
+let package = Package(
+  name: "RxSwiftUtiliesTestProject",
+  dependencies: [
+    .package(url: "https://github.com/RxSwiftCommunity/RxSwiftUtilities", from: "5.0.0")
+  ],
+  targets: [
+    .target(name: "RxSwiftUtiliesTestProject", dependencies: ["RxSwiftUtilities"])
+  ]
+)
+```
+
+```shell
+$ swift build
+```
 
 ### [Carthage](https://github.com/Carthage/Carthage#installing-carthage)
 

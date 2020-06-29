@@ -7,6 +7,10 @@ All notable changes to this project will be documented in this file.
 
 * nothing *
 
+## [2.3.0](https://github.com/RxSwiftCommunity/RxSwiftUtilities/releases/tag/2.3.0) (Swift 5 compatible)
+
+* Add Swift Package Manager support
+
 ## [2.2.0](https://github.com/RxSwiftCommunity/RxSwiftUtilities/releases/tag/2.2.0) (Swift 5 compatible)
 
 * Add Github Action
