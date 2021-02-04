@@ -5,13 +5,13 @@ import PackageDescription
 let package = Package(
     name: "RxSwiftUtilities",
     platforms: [
-        .iOS(.v8)
+        .iOS(.v9)
     ],
     products: [
         .library(name: "RxSwiftUtilities", targets: ["RxSwiftUtilities"])
     ],
     dependencies:[
-        .package(url:"https://github.com/ReactiveX/RxSwift", from: "5.1.0")
+        .package(url:"https://github.com/ReactiveX/RxSwift", from: "6.0.0")
     ],
     targets: [
         .target(name: "RxSwiftUtilities",
