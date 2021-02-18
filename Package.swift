@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "RxSwiftUtilities",
     platforms: [
-        .iOS(.v8)
+        .iOS(.v9)
     ],
     products: [
         .library(name: "RxSwiftUtilities", targets: ["RxSwiftUtilities"])
