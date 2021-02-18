@@ -9,7 +9,7 @@ Helpful classes and extensions for RxSwift which don't belong in RxSwift core.
   s.license      = { :type => "MIT", :file => "LICENSE.md" }
   s.author       = { "Jesse Farless" => "solidcell@gmail.com" }
   s.swift_version = "5.0"
-  s.ios.deployment_target = "9.0"
+  s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.10"
   s.tvos.deployment_target = "9.0"
   s.watchos.deployment_target = "3.0"
