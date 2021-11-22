@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RxSwiftUtilities"
-  s.version      = "3.0.0"
+  s.version      = "3.0.3"
   s.summary      = "Helpful classes and extensions for RxSwift"
   s.description  = <<-DESC
 Helpful classes and extensions for RxSwift which don't belong in RxSwift core.

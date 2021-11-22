@@ -8,19 +8,31 @@ let package = Package(
         .iOS(.v9)
     ],
     products: [
-        .library(name: "RxSwiftUtilities", targets: ["RxSwiftUtilities"])
+        // Products define the executables and libraries produced by a package, and make them visible to other packages.
+        .library(name: "RxSwiftUtilities",
+                 targets: ["RxSwiftUtilities"])
     ],
     dependencies:[
-        .package(url:"https://github.com/ReactiveX/RxSwift", from: "6.0.0")
+        // Dependencies declare other packages that this package depends on.
+        .package(url:"https://github.com/ReactiveX/RxSwift", .upToNextMajor(from: "6.0.0"))
     ],
     targets: [
+        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
+        // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(name: "RxSwiftUtilities",
-                dependencies:["RxSwift","RxCocoa"],
+                dependencies: [
+                    .product(name: "RxSwift", package: "RxSwift"),
+                    .product(name: "RxCocoa", package: "RxCocoa"),
+                ],
                 path:"Source",
-                sources:["Common",
-                "iOS"]),
+                sources:["Common", "iOS"]),
         .testTarget(name: "RxSwiftUtilitiesTest",
-                    dependencies:["RxSwift","RxCocoa","RxSwiftUtilities", "RxTest" ],
+                    dependencies:[
+                        .byName(name: "RxSwiftUtilities"),
+                        .product(name: "RxSwift", package: "RxSwift"),
+                        .product(name: "RxCocoa", package: "RxCocoa"),
+                        .product(name: "RxTest", package: "RxTest"),
+                    ],
                     path: "Tests"
         )
     ]
