@@ -9,7 +9,7 @@ on:
       - master
 
 jobs:
-  tests:
+  carthage-tests:
     runs-on: macos-10.15
 
     steps:
@@ -27,6 +27,36 @@ jobs:
 
     - name: Run all tests
       run: xcodebuild clean build test -scheme 'RxSwiftUtilities iOS' -destination "platform=iOS Simulator,name=iPhone 11" -enableCodeCoverage YES
+
+    - name: CodeCov
+      run: bash <(curl -s https://codecov.io/bash) -J 'RxSwiftUtilities'
+  spm-tests:
+    runs-on: macos-10.15
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/cache@v2
+      with:
+        path: SPM
+        key: ${{ runner.os }}-spm-${{ hashFiles('**/Cartfile.resolved') }}
+        restore-keys: |
+          ${{ runner.os }}-spm-
+
+    - name: Swift Package manager
+      run: |
+        swift build -Xswiftc "-sdk" \
+        -Xswiftc "`xcrun --sdk iphonesimulator --show-sdk-path`" \
+        -Xswiftc "-target" \
+        -Xswiftc "x86_64-apple-ios13.0-simulator"
+
+    - name: Run all tests
+      run: |
+        swift test -Xswiftc "-sdk" \
+        -Xswiftc "`xcrun --sdk iphonesimulator --show-sdk-path`" \
+        -Xswiftc "-target" \
+        -Xswiftc "x86_64-apple-ios13.0-simulator" \
+        --enable-code-coverage
 
     - name: CodeCov
       run: bash <(curl -s https://codecov.io/bash) -J 'RxSwiftUtilities'
